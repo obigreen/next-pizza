@@ -14,22 +14,24 @@ const geistMono = Geist_Mono({
     display: "swap"
 });
 
+// Отдельно закопаться seo in next
 export const metadata: Metadata = {
-    title: "X App",
+    title: {
+        // расширил
+        template: 'X App',
+        default: ''
+    },
     description: "Frontend Development",
 };
 
-export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
-    children: React.ReactNode;
-}>) {
+export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
     return (
-        <html
-            lang="en"
-         className={''}
-        >
-        <body className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>{children}</body>
+        <html lang="en">
+        <body className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+
+        {children}
+
+        </body>
         </html>
     );
 }
