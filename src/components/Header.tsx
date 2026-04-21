@@ -1,4 +1,5 @@
 import Link from "next/link";
+import {Menu} from "@/src/components/Menu";
 
 export function Header() {
     return (
@@ -16,11 +17,7 @@ export function Header() {
                 </svg>
             </Link>
 
-            <nav className="flex gap-6 text-sm text-white/80">
-                <Link href="/">Home</Link>
-                <Link href="/">Explore</Link>
-                <Link href="/">Profile</Link>
-            </nav>
+            <Menu/>
         </header>
 
 
