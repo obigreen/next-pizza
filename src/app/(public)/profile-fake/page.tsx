@@ -1,7 +1,11 @@
-export default function ProfileFake() {
-    return (
-        <div>
+import type { Metadata } from 'next';
+import {ProfileFake} from "@/src/app/(public)/profile-fake/ProfileFake";
 
-        </div>
-    );
+export const metadata: Metadata = {
+    title: 'ProfileFake',
+}
+
+
+export default function ProfileFakePage() {
+    return  <ProfileFake />
 }
