@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import {Profile} from "@/src/app/(public)/user/[username]/Profile";
 
 export const metadata: Metadata = {
     title: 'profile'
@@ -6,6 +7,6 @@ export const metadata: Metadata = {
 
 export default function ProfilePage() {
     return (
-        <div></div>
+        <div><Profile/></div>
     )
 }
